@@ -50,22 +50,22 @@ public class Pizza {
         // your code goes here
         if(calledcheese) {
             bill+="Extra Cheese Added: 80\n";
-            billvalue+=80;
+            price+=80;
         }
         if(calledtoppings && isVeg) {
             bill+="Extra Toppings Added: 70\n";
-            billvalue+=70;
+            price+=70;
         }
         if(calledtoppings && !isVeg) {
             bill+="Extra Toppings Added: 120\n";
-            billvalue+=120;
+            price+=120;
         }
         if(calledtakeaway) {
             bill+="Paperbag Added: 20\n";
-            billvalue+=20;
+            price+=20;
         }
         bill+="Total Price: ";
-        bill+=Integer.toString(billvalue);
+        bill+=Integer.toString(price);
         return this.bill;
     }
 }
