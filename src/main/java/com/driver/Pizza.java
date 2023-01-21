@@ -25,7 +25,7 @@ public class Pizza {
         calledtoppings=false;
         calledtakeaway=false;
         isbill = false;
-
+        bill="";
         if(isVeg) this.bill="Base Price Of The Pizza: 300\n";
                 else this.bill="Base Price Of The Pizza: 400\n";
 
@@ -47,8 +47,6 @@ public class Pizza {
         if(!calledtoppings){
             this.price+=toppings;
         }
-
-
         calledtoppings=true;
     }
 
@@ -77,6 +75,7 @@ public class Pizza {
             }
             bill += "Total Price: ";
             bill += Integer.toString(price);
+            bill+="\n";
             isbill=true;
         }
         return this.bill;
